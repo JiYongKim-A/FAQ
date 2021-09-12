@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/css/bootstrap.min.css}">
+    <style>
+    .no{
+        color: #dc3545;
+    }
+    .yes{
+        color: #20c997;
+    }
+    </style>
+
+</head>
+<body>
+<div class="container" style="max-width: 600px">
+
+
+    <div class="py-5 text-center">
+
+        <h2>My Page</h2>
+        <br>
+        <h4>내가 문의한 질문</h4>
+    </div>
+
+   
+
+    
+    <div class="row">
+
+        <div class="col">
+
+            <button class="btn btn-primary float-end"
+
+                    onclick="location.href='addForm.html'"
+                    th:onclick="|location.href='@{/question/questionForm}'|"
+                    type="button">문의 하기</button>
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <table class="table">
+
+            <thead>
+
+            <tr>
+                <th>관리 번호</th>
+
+                <th>질문 제목</th>
+                
+                <th> 작성자 </th>
+
+                <th> 답변 여부 </th>
+            </tr>
+
+            </thead>
+
+            <tbody>
+
+            <tr th:each="question : ${questions}" th:if="${questions!=null}">
+
+                <td><a href="item.html" th:href="@{/Question/{QuestionManageNum}(QuestionManageNum=${question.manageNum})}" th:text="${question.manageNum}">1</a></td>
+
+                <td><a href="item.html" th:href="@{/Question/{QuestionManageNum}(QuestionManageNum=${question.manageNum})}" th:text="${question.title}" >로그인이 안되요</a></td>
+
+                <td th:text="${question.questionMember}"> 질문자 </td>
+
+                <td th:if="${question.answerStatus=='N'}" th:class="no" th:text="${question.answerStatus}"> Y/N </td>
+                <td th:if="${question.answerStatus=='Y'}" th:class="yes" th:text="${question.answerStatus}"> Y/N </td>
+
+            </tr>
+
+
+            </tbody>
+
+        </table>
+
+       
+        <br>
+        <div class="col">
+
+            <button class="w-100 btn btn-secondary btn-lg"
+                    onclick="location.href='items.html'"
+                    th:onclick="|location.href='@{/}'|"
+                    type="button">홈으로</button>
+
+        </div>
+
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

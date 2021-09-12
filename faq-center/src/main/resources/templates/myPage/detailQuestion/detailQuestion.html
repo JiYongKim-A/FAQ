@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/css/bootstrap.min.css}">
+
+    <style>container {
+
+        max-width: 560px;
+    }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="py-5 text-center">
+
+        <h2>문의 상세</h2>
+
+    </div>
+
+    <div>
+
+        <label for="title">문의 제목</label>
+
+        <input type="text" id="title" name="title" th:value="${question.title}" class="form-control"
+               value="AAA가 안되요" readonly>
+
+    </div>
+
+    <div>
+
+        <label for="questionMember">문의자</label>
+
+        <input type="text" id="questionMember" name="questionMember" th:value="${question.questionMember}" class="form-control"
+               value="testing" readonly>
+
+    </div>
+
+    <div>
+
+        <label for="question">문의 내용</label>
+
+        <!-- <input type="text" id="price" name="price" class="form-control"
+               value="10000" readonly> -->
+        <textarea style="resize: none;" cols="30" rows="10" id="question" name="question" class="form-control" th:text="${question.question}" value="10000" readonly>
+        
+        ds
+       dsffs
+        </textarea>
+
+    </div>
+
+    <br>
+    <hr class="my-4">
+    <div>
+
+        <label for="answer"> 답변 </label>
+        <textarea style="resize: none;" cols="30" rows="10" id="answer" name="answer" class="form-control" value="10000" th:text="${question.answer}" readonly>1000</textarea>
+    </div>
+
+
+    <br>
+    <hr class="my-4">
+    <div class="row">
+
+        
+
+        <div class="col">
+
+            <button class="w-100 btn btn-secondary btn-lg"
+                    onclick="location.href='items.html'"
+                    th:onclick="|location.href='@{/mypage}'|"
+                    type="button">목록으로</button>
+
+        </div>
+
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

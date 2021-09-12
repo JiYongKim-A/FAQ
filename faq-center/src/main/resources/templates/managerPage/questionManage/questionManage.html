@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/css/bootstrap.min.css}">
+    <style>
+        .container {
+            max-width: 560px;
+        }
+        .center{
+            text-align: center;
+        }
+        .no{
+            color: #dc3545;
+        }
+        .yes{
+            color: #20c997;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container" style="max-width: 600px">
+
+    <div class="py-5 text-center">
+
+        <h2>문의 관리</h2>
+        <br>
+        <h4>문의 내용</h4>
+    </div>
+
+
+
+    <div>
+
+        <table class="table">
+
+            <thead>
+
+            <tr>
+                <th class="center">관리 번호</th>
+
+                <th class="center">질문 제목</th>
+                
+                <th class="center"> 작성자 </th>
+
+                <th class="center"> 답변 여부 </tr>
+            </tr>
+
+            </thead>
+
+            <tbody>
+
+            <tr th:each="question : ${questions}">
+
+                <td class="center"><a href="item.html"
+                                      th:href="@{/managerPage/questionManage/answer/{manageNum}(manageNum=${question.manageNum})}"
+                th:text="${question.manageNum}">1</a></td>
+
+                <td class="center"><a href="item.html"
+                                      th:href="@{/managerPage/questionManage/answer/{manageNum}(manageNum=${question.manageNum})}"
+                                      th:text="${question.title}">로그인이 안되요</a></td>
+
+                <td class="center" th:text="${question.questionMember}"> 코굼 </td>
+
+                <td th:if="${question.answerStatus=='N'}" th:class="no" th:classappend="center" th:text="${question.answerStatus}"> Y/N </td>
+                <td th:if="${question.answerStatus=='Y'}" th:class="yes" th:classappend="center" th:text="${question.answerStatus}"> Y/N </td>
+
+            </tr>
+
+
+            </tbody>
+
+        </table>
+
+       
+        <br>
+        <div class="col">
+
+            <button class="w-100 btn btn-secondary btn-lg"
+                    onclick="location.href='items.html'"
+                    th:onclick="|location.href='@{/managerPage}'|" type="button">관리자 페이지로</button>
+
+        </div>
+
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

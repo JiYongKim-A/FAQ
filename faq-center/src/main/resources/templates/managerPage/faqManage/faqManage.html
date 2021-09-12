@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/css/bootstrap.min.css}">
+
+</head>
+<body>
+    <hr class="my-4">
+<div class="container" style="max-width: 600px">
+
+    <div class="row">
+
+        <div class="col">
+
+            <button class="btn btn-secondary float-end"
+
+                    onclick="location.href='addForm.html'"
+                    th:onclick="|location.href='@{/managerPage}'|"
+                    type="button">관리자 페이지로</button>
+
+        </div>
+
+    </div>
+
+    <div class="py-5 text-center">
+
+        <h2>  FAQ 관리</h2>
+        <br>
+        <h4>자주하는 질문</h4>
+         
+    </div>
+
+    <div class="row">
+
+        <div class="col">
+
+            <button class="btn btn-primary float-end"
+
+                    onclick="location.href='addForm.html'" type="button"
+                    th:onclick="|location.href='@{/managerPage/faqManage/addFaq}'|">FAQ 추가</button>
+
+
+
+        </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <div>
+
+        <table class="table">
+
+            <thead>
+
+            <tr><th>관리 번호</th>
+
+                <th>질문</th>
+
+                <th>관리 </th>
+            </tr>
+
+            </thead>
+
+            <tbody>
+
+            <tr th:each="faq : ${faqs}">
+
+                <td id="num" name="num" th:text="${faq.num}">1</td>
+
+                <td th:text="${faq.title}">로그인이 안되요</td>
+
+                <td>
+                    <form action="item.html" th:action="@{/managerPage/faqManage/editFaq/{manageNum}(manageNum=${faq.num})}" style="display: inline;" method="post">
+                        <button type="submit" class="btn btn-dark">
+                        수정
+                        </button>
+                    </form>
+
+                    <form action="item.html" th:action="@{/managerPage/faqManage/removeFaq/{manageNum}(manageNum=${faq.num})}" style="display: inline;" method="post">
+                        <button type="submit" class="btn btn-dark">
+                        제거
+                        </button>
+                    </form>
+
+                </td>
+            </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

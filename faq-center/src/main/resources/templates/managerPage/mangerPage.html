@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container" style="max-width: 600px">
+    <br>
+    <div class="row">
+        <div class="col">
+
+            <form th:action="@{/logout}" method="post">
+
+                <button class="btn btn-secondary  float-end"
+                        onclick="location.href='items.html'" type="submit">
+
+                    로그아웃
+
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="py-5 text-center">
+
+        <h2>Manager Page</h2>
+        
+    </div>
+
+   
+
+    <hr class="my-4">
+    <br>
+
+    <div>
+
+        <div class="row">
+
+            
+    
+            <div class="col">
+    
+                <button class="w-100 btn btn-primary btn-lg"
+                        onclick="location.href='items.html'"
+                        th:onclick="|location.href='@{/managerPage/faqManage}'|" type="button">
+    
+                    FAQ 관리
+    
+                </button>
+    
+            </div>
+    
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+
+    
+            <div class="col">
+    
+                <button class="w-100 btn btn-primary btn-lg"
+                        onclick="location.href='items.html'"
+    
+                        th:onclick="|location.href='@{/managerPage/questionManage}'|" type="button">
+    
+                    문의 관리
+    
+                </button>
+    
+            </div>
+    
+        </div>
+
+
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

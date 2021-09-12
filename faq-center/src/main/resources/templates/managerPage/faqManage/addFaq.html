@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/css/bootstrap.min.css}">
+
+    <style>container {
+
+        max-width: 560px;
+        
+
+    }
+    .field-error {
+
+        border-color: #dc3545;
+
+        color: #dc3545;
+
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+    <div class="py-5 text-center">
+
+        <h2>FAQ 추가</h2>
+
+    </div>
+
+    <form action="item.html" th:action th:object="${faqForm}" method="post">
+
+        <div>
+
+             <label for="title">문의 제목</label>
+
+             <input type="text" id="title" name="title" th:field="*{title}" class="form-control"
+                    th:errorclass="field-error"
+               placeholder="문의 제목을 작성하세요" >
+            <div class="field-error" th:errors="*{title}" />
+         </div>
+
+        <div>
+
+          <label for="questionMember">문의자</label>
+
+         <input type="text" id="questionMember" name="questionMember" th:field="*{questionMember}" class="form-control"
+               th:errorclass="field-error"
+                value="testing" placeholder="문의자 이름 작성">
+            <div class="field-error" th:errors="*{questionMember}" />
+         </div>
+
+            <div>
+
+        <label for="question">문의 내용</label>
+
+        <!-- <input type="text" id="price" name="price" class="form-control"
+               value="10000" readonly> -->
+              <textarea style="resize: none;" cols="30" rows="10" id="question" name="question"
+                        th:field="*{question}"
+                        th:errorclass="field-error"
+                        class="form-control" value="10000"
+              placeholder="문의 내용을 입력하세요">
+
+                </textarea>
+                <div class="field-error" th:errors="*{question}" />
+            </div>
+
+        <br>
+        <hr class="my-4">
+        <div>
+
+            <label for="answer"> 답변 </label>
+            <textarea style="resize: none;" cols="30" rows="10" id="answer" name="answer"
+                      th:field="*{answer}" th:errorclass="field-error"
+                      class="form-control" value="10000" placeholder="답변을 작성하세요" ></textarea>
+            <div class="field-error" th:errors="*{answer}" />
+        </div>
+
+
+        <br>
+        <hr class="my-4">
+        <div class="row">
+
+
+            <div class="col">
+
+                <button class="w-100 btn btn-secondary btn-lg"
+                        onclick="location.href='items.html'"
+                        th:onclick="|location.href='@{/managerPage/faqManage}'|"
+                        type="button">목록으로</button>
+
+            </div>
+            <div class="col">
+
+                <button class="w-100 btn btn-primary btn-lg" type="submit">추가 하기</button>
+
+            </div>
+        </div>
+        <br>
+        <br>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>
