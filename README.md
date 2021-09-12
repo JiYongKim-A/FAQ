@@ -13,3 +13,8 @@
 
 
 ![home](https://user-images.githubusercontent.com/81874493/133004425-2729c7db-f325-4a22-942e-cfe9ad2586ff.gif)
+
+
+== **Upcoming Improvements** ==
+
+![1) 예정사항](https://user-images.githubusercontent.com/81874493/133004458-0bfb9db3-46a7-4703-bb11-2bc7ff4fa98e.PNG)
