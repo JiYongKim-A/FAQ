@@ -1,7 +1,7 @@
 package FAQ.faqcenter.web.faqs;
 
 import FAQ.faqcenter.domain.faq.Faq;
-import FAQ.faqcenter.domain.repositoryInterface.FaqRepository;
+import FAQ.faqcenter.repository.faqRepository.inf.FaqRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

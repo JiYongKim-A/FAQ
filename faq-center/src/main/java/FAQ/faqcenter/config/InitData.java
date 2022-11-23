@@ -1,12 +1,12 @@
-package FAQ.faqcenter;
+package FAQ.faqcenter.config;
 
 import FAQ.faqcenter.domain.authority.Authority;
 import FAQ.faqcenter.domain.faq.Faq;
 import FAQ.faqcenter.domain.member.Member;
 import FAQ.faqcenter.domain.question.Question;
-import FAQ.faqcenter.domain.repositoryInterface.FaqRepository;
-import FAQ.faqcenter.domain.repositoryInterface.MemberRepository;
-import FAQ.faqcenter.domain.repositoryInterface.QuestionRepository;
+import FAQ.faqcenter.repository.faqRepository.inf.FaqRepository;
+import FAQ.faqcenter.repository.memberRepository.inf.MemberRepository;
+import FAQ.faqcenter.repository.questionRepository.inf.QuestionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

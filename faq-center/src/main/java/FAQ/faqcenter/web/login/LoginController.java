@@ -2,9 +2,9 @@ package FAQ.faqcenter.web.login;
 
 import FAQ.faqcenter.domain.login.LoginService;
 import FAQ.faqcenter.domain.member.Member;
-import FAQ.faqcenter.web.WebConst.SessionConst;
+import FAQ.faqcenter.config.session.SessionConst;
 import FAQ.faqcenter.web.login.form.LoginForm;
-import FAQ.faqcenter.web.session.form.SessionForm;
+import FAQ.faqcenter.config.session.SessionForm;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

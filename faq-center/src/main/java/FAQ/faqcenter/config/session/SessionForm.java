@@ -1,4 +1,4 @@
-package FAQ.faqcenter.web.session.form;
+package FAQ.faqcenter.config.session;
 
 import lombok.*;
 

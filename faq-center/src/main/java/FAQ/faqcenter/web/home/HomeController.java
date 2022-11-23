@@ -1,11 +1,11 @@
 package FAQ.faqcenter.web.home;
 
 import FAQ.faqcenter.domain.faq.Faq;
-import FAQ.faqcenter.domain.repositoryInterface.FaqRepository;
-import FAQ.faqcenter.domain.repositoryInterface.MemberRepository;
-import FAQ.faqcenter.domain.repositoryInterface.QuestionRepository;
-import FAQ.faqcenter.web.WebConst.SessionConst;
-import FAQ.faqcenter.web.session.form.SessionForm;
+import FAQ.faqcenter.repository.faqRepository.inf.FaqRepository;
+import FAQ.faqcenter.repository.memberRepository.inf.MemberRepository;
+import FAQ.faqcenter.repository.questionRepository.inf.QuestionRepository;
+import FAQ.faqcenter.config.session.SessionConst;
+import FAQ.faqcenter.config.session.SessionForm;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -13,7 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
-import java.net.URL;
 import java.util.List;
 
 @Slf4j

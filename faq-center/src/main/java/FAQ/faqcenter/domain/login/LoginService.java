@@ -1,7 +1,7 @@
 package FAQ.faqcenter.domain.login;
 
 import FAQ.faqcenter.domain.member.Member;
-import FAQ.faqcenter.domain.repositoryInterface.MemberRepository;
+import FAQ.faqcenter.repository.memberRepository.inf.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,7 @@
-package FAQ.faqcenter.domain.repositoryImpl;
+package FAQ.faqcenter.repository.questionRepository.impl;
 
-import FAQ.faqcenter.domain.faq.Faq;
 import FAQ.faqcenter.domain.question.Question;
-import FAQ.faqcenter.domain.repositoryInterface.QuestionRepository;
+import FAQ.faqcenter.repository.questionRepository.inf.QuestionRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 

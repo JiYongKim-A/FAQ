@@ -2,9 +2,9 @@ package FAQ.faqcenter.web.managerPage;
 
 import FAQ.faqcenter.domain.authority.Authority;
 import FAQ.faqcenter.domain.member.Member;
-import FAQ.faqcenter.domain.repositoryInterface.MemberRepository;
-import FAQ.faqcenter.web.WebConst.SessionConst;
-import FAQ.faqcenter.web.session.form.SessionForm;
+import FAQ.faqcenter.repository.memberRepository.inf.MemberRepository;
+import FAQ.faqcenter.config.session.SessionConst;
+import FAQ.faqcenter.config.session.SessionForm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

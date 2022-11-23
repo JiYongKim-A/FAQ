@@ -1,7 +1,7 @@
 package FAQ.faqcenter.web.signup;
 
 import FAQ.faqcenter.domain.member.Member;
-import FAQ.faqcenter.domain.repositoryInterface.MemberRepository;
+import FAQ.faqcenter.repository.memberRepository.inf.MemberRepository;
 import FAQ.faqcenter.web.signup.form.SignUpForm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

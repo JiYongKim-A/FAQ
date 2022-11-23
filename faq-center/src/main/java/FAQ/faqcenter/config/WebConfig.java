@@ -1,6 +1,6 @@
-package FAQ.faqcenter;
+package FAQ.faqcenter.config;
 
-import FAQ.faqcenter.domain.repositoryInterface.MemberRepository;
+import FAQ.faqcenter.repository.memberRepository.inf.MemberRepository;
 import FAQ.faqcenter.web.interceptor.LoginCheckInterceptor;
 import FAQ.faqcenter.web.interceptor.ManagerCheckInterceptor;
 import lombok.RequiredArgsConstructor;

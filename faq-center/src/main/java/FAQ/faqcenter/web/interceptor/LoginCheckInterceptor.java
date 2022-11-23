@@ -1,6 +1,6 @@
 package FAQ.faqcenter.web.interceptor;
 
-import FAQ.faqcenter.web.WebConst.SessionConst;
+import FAQ.faqcenter.config.session.SessionConst;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.HandlerInterceptor;
 

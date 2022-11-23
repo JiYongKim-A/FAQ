@@ -1,7 +1,7 @@
-package FAQ.faqcenter.domain.repositoryImpl;
+package FAQ.faqcenter.repository.faqRepository.impl;
 
 import FAQ.faqcenter.domain.faq.Faq;
-import FAQ.faqcenter.domain.repositoryInterface.FaqRepository;
+import FAQ.faqcenter.repository.faqRepository.inf.FaqRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;

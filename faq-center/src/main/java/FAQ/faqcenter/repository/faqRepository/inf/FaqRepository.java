@@ -1,4 +1,4 @@
-package FAQ.faqcenter.domain.repositoryInterface;
+package FAQ.faqcenter.repository.faqRepository.inf;
 
 import FAQ.faqcenter.domain.faq.Faq;
 

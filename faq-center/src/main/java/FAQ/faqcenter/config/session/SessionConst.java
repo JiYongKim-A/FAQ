@@ -1,4 +1,4 @@
-package FAQ.faqcenter.web.WebConst;
+package FAQ.faqcenter.config.session;
 
 public abstract class SessionConst {
 

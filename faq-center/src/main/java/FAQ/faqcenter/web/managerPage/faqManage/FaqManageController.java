@@ -1,16 +1,13 @@
 package FAQ.faqcenter.web.managerPage.faqManage;
 
 import FAQ.faqcenter.domain.faq.Faq;
-import FAQ.faqcenter.domain.question.Question;
-import FAQ.faqcenter.domain.repositoryInterface.FaqRepository;
-import FAQ.faqcenter.domain.repositoryInterface.QuestionRepository;
+import FAQ.faqcenter.repository.faqRepository.inf.FaqRepository;
 import FAQ.faqcenter.web.faqs.form.FaqForm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.util.List;

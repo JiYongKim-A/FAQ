@@ -1,7 +1,7 @@
-package FAQ.faqcenter.domain.repositoryImpl;
+package FAQ.faqcenter.repository.memberRepository.impl;
 
 import FAQ.faqcenter.domain.member.Member;
-import FAQ.faqcenter.domain.repositoryInterface.MemberRepository;
+import FAQ.faqcenter.repository.memberRepository.inf.MemberRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

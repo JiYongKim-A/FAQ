@@ -1,10 +1,10 @@
 package FAQ.faqcenter.web.question;
 
 import FAQ.faqcenter.domain.question.Question;
-import FAQ.faqcenter.domain.repositoryInterface.QuestionRepository;
-import FAQ.faqcenter.web.WebConst.SessionConst;
+import FAQ.faqcenter.repository.questionRepository.inf.QuestionRepository;
+import FAQ.faqcenter.config.session.SessionConst;
 import FAQ.faqcenter.web.question.form.QuestionForm;
-import FAQ.faqcenter.web.session.form.SessionForm;
+import FAQ.faqcenter.config.session.SessionForm;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

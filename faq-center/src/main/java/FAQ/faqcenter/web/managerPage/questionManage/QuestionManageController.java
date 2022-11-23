@@ -1,11 +1,10 @@
 package FAQ.faqcenter.web.managerPage.questionManage;
 
 import FAQ.faqcenter.domain.question.Question;
-import FAQ.faqcenter.domain.repositoryInterface.QuestionRepository;
+import FAQ.faqcenter.repository.questionRepository.inf.QuestionRepository;
 import FAQ.faqcenter.web.managerPage.questionManage.form.QuestionManageForm;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
