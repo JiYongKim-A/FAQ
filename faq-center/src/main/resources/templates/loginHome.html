@@ -8,10 +8,10 @@
           th:href="@{/css/bootstrap.min.css}">
 </head>
 <body>
-    <hr class="my-4">
+<hr class="my-4">
 <div class="container" style="max-width: 600px">
 
-   
+
     <div class="row">
 
         <div class="col">
@@ -21,23 +21,32 @@
         </div>
 
     </div>
-    
-    <div class="col">
 
+
+        <div class="col" >
             <button class="btn btn-primary  float-end"
                     onclick="location.href='logout'" type="submit"
-                    th:onclick="|location.href='@{/mypage}'|">
+                    th:onclick="|location.href='@{/mypage}'|" >
                 MyPage
             </button>
 
-    </div>
+
+            <button th:if="${manager == true }" class="btn btn-primary  float-end"
+                    onclick="location.href='logout'" type="submit"
+                    th:onclick="|location.href='@{/managerPage}'|">
+                관리자 페이지
+            </button>
+        </div>
+
+
+
 
     <div class="py-5 text-center">
 
         <h2>고객 센터</h2>
         <br>
         <h4>자주하는 질문</h4>
-        
+
     </div>
 
     <div class="row">
@@ -48,7 +57,8 @@
 
                     onclick="location.href='addForm.html'"
                     th:onclick="|location.href='@{/question/questionForm}'|"
-                    type="button">문의 하기</button>
+                    type="button">문의 하기
+            </button>
 
         </div>
 
@@ -63,20 +73,21 @@
             <thead>
             <tr>
                 <th th:text="#{label.faq.num}">번호</th>
-                <th th:text ="#{label.faq.title}">질문</th>
+                <th th:text="#{label.faq.title}">질문</th>
                 <th th:text="#{label.faq.questionMember}">질문자</th>
             </tr>
             </thead>
 
             <tbody>
-            <tr th:each ="faq : ${faqs}" th:if="${faqs!=null}">
+            <tr th:each="faq : ${faqs}" th:if="${faqs!=null}">
                 <td><a href="item.html" th:href="@{/FAQ/{faqNum}(faqNum=${faq.num})}" th:text="${faq.num}">1</a></td>
-                <td><a href="item.html" th:href="@{/FAQ/{faqNum}(faqNum=${faq.num})}" th:text="${faq.title}">로그인이 안되요</a></td>
-                <td th:text="${faq.questionMember}">질문자A </td>
+                <td><a href="item.html" th:href="@{/FAQ/{faqNum}(faqNum=${faq.num})}" th:text="${faq.title}">로그인이
+                    안되요</a></td>
+                <td th:text="${faq.questionMember}">질문자A</td>
             </tr>
             </tbody>
         </table>
-        
+
 
     </div>
 
@@ -93,7 +104,7 @@
 
         </form>
     </div>
-    
+
 </div> <!-- /container -->
 
 </body>

@@ -1,8 +1,8 @@
 package FAQ.faqcenter.config;
 
 import FAQ.faqcenter.repository.memberRepository.inf.MemberRepository;
-import FAQ.faqcenter.web.interceptor.LoginCheckInterceptor;
-import FAQ.faqcenter.web.interceptor.ManagerCheckInterceptor;
+import FAQ.faqcenter.config.interceptor.LoginCheckInterceptor;
+import FAQ.faqcenter.config.interceptor.ManagerCheckInterceptor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
